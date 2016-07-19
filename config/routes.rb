@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root 'manage#index'
 
-  constraints subdomain: 'api' do
+  # constraints subdomain: 'api' do
     scope module: 'api', as: 'api' do
       namespace :v1 do
         namespace :bank do
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
         end
       end
     end
-  end
+  # end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
