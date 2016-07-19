@@ -15,8 +15,6 @@
 //= require angular
 //= require angular-route
 //= require semantic
-//= require angular-rails-templates
-//= require_tree ../templates
 //= require app
 //= require home
 //= require index
