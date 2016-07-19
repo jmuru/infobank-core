@@ -1,4 +1,4 @@
-var admin = angular.module("admin", ["ngRoute", "templates"])
+var admin = angular.module("admin", ["ngRoute"])
 .config(function ($routeProvider) {
   $routeProvider
   .when("/", {
