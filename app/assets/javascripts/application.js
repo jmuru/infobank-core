@@ -17,9 +17,9 @@
 //= require semantic
 //= require angular-rails-templates
 //= require_tree ../templates
-//= require ./app
-//= require ./home
-//= require ./index
+//= require app
+//= require home
+//= require index
 //= require_tree ./controllers
 //= require_tree ./directives
 //= require_tree ./factories
