@@ -1,0 +1,95 @@
+
+#display-btns {
+	margin-top: 2%;
+	margin-left: 3%;
+}
+
+#display-btns a {
+	color: black;
+}
+
+#display-btns a:hover {
+	color: #00A0A6;
+}
+
+.ui .breadcrumb {
+	margin-top: 2%;
+	margin-left: 3%;
+}
+
+.ui .breadcrumb a {
+	color: black;
+}
+
+.ui .breadcrumb a:hover {
+	color: #00A0A6;
+}
+
+#file-listing {
+	list-style: none;
+	margin-left: 3%;
+}
+
+#file-listing .file-listing-item {
+	border-top: 1px solid #eee;
+	width: 89%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+
+}
+
+#file-listing .file-listing-item:last-child {
+	border-bottom: 1px solid #eee;
+}
+
+#file-listing .file-listing-item a {
+	text-align: left;
+	color: black;
+}
+
+#file-listing .file-listing-item a:hover {
+	color: #00A0A6;
+}
+
+.condition-div .icon {
+	float: left;
+}
+
+#card-listing {
+	margin-top: 2%;
+	margin-left: 10%;
+	text-align: center;
+}
+
+#card-listing .card-item {
+	margin: 0 !important;
+	margin-top: 2% !important;
+	margin-left: 30px !important;
+	float: left;
+	width: 210px !important;
+}
+
+#card-listing .card-item .image {
+	height: 100px;
+}
+
+#card-listing .card-item .content a:hover {
+	color: #00A0A6;
+}
+
+.editBtn {
+	position: absolute;
+	top: 10%;
+	right: 0;
+}
+
+.editBox {
+	z-index: 999;
+	background: white;
+	right: -25%;
+	top: 6.7%;
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	border-left: 1px solid #eee;
+}

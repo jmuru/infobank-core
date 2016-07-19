@@ -1,0 +1,77 @@
+<!-- main file display page -->
+<div id="file-display">
+	<div ng-controller="modalController">
+		<div ng-include="'assets/modals.html'"></div>
+	</div>
+	<div ng-controller="fileNavController">
+		<div id="display-btns">
+			<a ng-click="toggleFile()" ng-show="file" href=""><i class=" large grid layout icon"></i></a>
+			<a ng-click="toggleFile()" ng-hide="file" href=""><i class=" large list layout icon"></i></a>
+		</div>
+		<div class="ui breadcrumb">
+			<div ng-repeat="folder in directory.parents" style="display: inline-block;">
+				<a class="section" ng-click="loadDirectory(folder.id)">{{folder.name}}</a>
+				<div class="divider"> / </div>
+			</div>
+		</div>
+		<div ng-show="file" id="file-listing" class="ui list">
+			<div class="file-listing-item item" ng-repeat="file in directory.entries"  ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+				<div class="condition-div" ng-if="file.type == 'folder'">
+					<i class="folder icon"></i>
+					<div class="content">
+						<a ng-click="loadDirectory(file.id)" href="">{{file.name}}</a>
+					</div>
+					<div class="ui mini horizontal divided list" ng-show="hoverEdit">
+						<div class="item"><a href="">Edit</a></div>
+						<div class="item"><a href="">Move</a></div>
+					</div>
+				</div>
+				<div class="condition-div" ng-if="file.type == 'file'">
+					<i class="file text icon"></i>
+					<div class="content">
+						<a href="{{assembleDownloadUrl(file.id)}}">{{file.name}}</a>
+					</div>
+					<div class="ui mini horizontal divided list" ng-show="hoverEdit">
+						<div class="item"><a ng-click="editWindow(file)" href="">Edit</a></div>
+						<div class="item"><a href="">Move</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-hide="file" id="card-listing">
+			<div  class="card-item ui card" ng-repeat="file in selectedCloud.files">
+
+				<div class="image">
+					<img src="">
+				</div>
+				<div class="content">
+					<a class="header" href="" ng-click="getData()">{{file.name}}</a>
+				</div>
+				<div ng-if="file.type == 'folder'">
+					<div class="extra content">
+						<div class="ui mini horizontal divided list">
+							<div class="item"><a href="">Move</a></div>
+							<div class="item"><a href="">Delete</a></div>
+						</div>
+					</div>
+				</div>
+				<div ng-if="file.type == 'file'">
+					<div class="extra content">
+						<div class="ui mini horizontal divided list">
+							<div class="item"><a ng-click="editWindow(file)" href="">Edit</a></div>
+							<div class="item"><a href="">Move</a></div>
+							<div class="item"><a href="">Delete</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<button class="editBtn small ui button">
+  <
+</button>
+<div class="editBox">
+	<div edit-window></div>
+</div>

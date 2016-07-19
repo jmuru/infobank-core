@@ -1,0 +1,20 @@
+#clouds-title {
+	color: white;
+	margin-left: 6%;
+	margin-top: 15% !important;
+}
+
+#clouds-list {
+	list-style: none;
+}
+
+.cloud-actions {
+	display: inline;
+	padding: 0;
+}
+
+.cloud-actions li {
+	display: inline;
+	list-style: none;
+	font-size: 12px;
+}

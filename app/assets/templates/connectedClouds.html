@@ -1,0 +1,15 @@
+<div ng-controller="connectedCloudCtrl">
+	<h3 id="clouds-title">Connected Clouds</h3>
+	<ul id="clouds-list">
+		<li ng-repeat="cloud in user.stores" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+			<a ng-click="select(cloud)" href=>
+				{{cloud}}
+			</a>
+			<br>
+			<ul ng-show="hoverEdit" class="cloud-actions">
+				<li><a href="">Edit</a></li>
+				<li><a href="">Delete</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
