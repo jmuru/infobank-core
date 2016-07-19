@@ -1,9 +1,8 @@
-var module = angular.module("admin", ["ngRoute"]);
-
-module.config(function ($routeProvider) {
+var admin = angular.module("admin", ["ngRoute", "templates"])
+.config(function ($routeProvider) {
   $routeProvider
   .when("/", {
-    templateUrl : "assets/home.html",
+    templateUrl : "templates/home.html",
     controller : "mainController"
   })
 });

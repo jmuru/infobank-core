@@ -6,7 +6,6 @@ module.controller("connectedCloudCtrl", ["$scope", "$rootScope", "userService",
       userService.info().then(
   			function(data) {
   				$scope.user = data;
-  				console.log($scope.user.stores);
   			}
   		);
 
