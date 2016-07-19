@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'resque', "~> 1.22.0"
+gem 'puma'
 
 gem 'mongoid', '~> 5.1.0'
 gem 'devise'
